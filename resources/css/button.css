@@ -18,9 +18,22 @@ button:hover {
     background-color: #bae8e8;
     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
     color: #fff;
-    transform: translateY(-7px);
 }
   
 button:active {
+    transform: translateY(-1px);
+}
+
+button.delete-btn{
+    color: #fffffe !important;
+    background-color: #e53170 !important;
+    border-radius: 45px;
+}
+
+button.delete-btn:hover {
+    background-color: #f25f4c !important;
+}
+  
+button.delete-btn:active {
     transform: translateY(-1px);
 }

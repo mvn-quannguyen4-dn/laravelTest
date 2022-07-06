@@ -21,4 +21,5 @@ Route::get('/', function () {
 Route::get('/users',[UserController::class,'index']);
 Route::get('/user/{user}',[UserController::class,'show']);
 Route::get('/createUser',[UserController::class,'create']);
+Route::get('/editUser/{user}',[UserController::class,'edit']);
 Route::get('/redirect',[UserController::class,'redirectRoute']);
