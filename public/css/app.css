@@ -1,0 +1,133 @@
+* {
+    background-color: #fffffe;
+    margin: 0;
+    padding: 0;
+    color: #2d334a;
+}
+table {
+    margin: 5%;
+    width: 90%;
+}
+table, th, td {
+    border: 1px solid #272343;
+}
+table caption{
+    font-weight: bolder;
+    font-size: larger;
+}
+table caption,th{
+    color: #ffd803;
+}
+table thead tr td{
+    padding: 10px;
+    text-align: center;
+}
+th, td{
+    padding: 5px 5px;
+}
+hr{
+    color: #272343
+}
+header{
+    display: flex;
+    padding: 1%;
+    flex-direction: row-reverse;
+}
+
+
+button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #272343;
+    background-color: #ffd803;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: #bae8e8;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+}
+  
+button:active {
+    transform: translateY(-1px);
+}
+
+button.delete-btn{
+    color: #fffffe !important;
+    background-color: #e53170 !important;
+    border-radius: 45px;
+}
+
+button.delete-btn:hover {
+    background-color: #f25f4c !important;
+}
+  
+button.delete-btn:active {
+    transform: translateY(-1px);
+}
+.register-container{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    font-family: Roboto, Arial, sans-serif;
+}
+.createUser{
+    padding: 10px 10%;
+    margin-top: 1%;
+    border-radius: 5px; 
+    border: solid 1px #ccc;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+}
+form, form h4.register-title{
+    padding: 10px 0;
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+}
+input[type=text], input[type=password] {
+    width: calc(100% - 57px);
+    height: 36px;
+    margin: 13px 0 0 -5px;
+    padding-left: 10px; 
+    border-radius: 0 5px 5px 0;
+    border: solid 1px #cbc9c9; 
+    box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+    background: #fff; 
+}
+input[type=password] {
+    margin-bottom: 15px;
+}
+label#icon {
+    margin: 0;
+    border-radius: 5px 0 0 5px;
+}
+.submit-button {
+    margin-top: 10px;
+    text-align: center;
+}
+
+button.register-button{
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px auto;
+    border-radius: 5px; 
+    border: none;
+    background: #1c87c9; 
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+button.register-button{
+background: #26a9e0;
+}
+
+

@@ -1,0 +1,30 @@
+* {
+    background-color: #fffffe;
+    margin: 0;
+    padding: 0;
+    color: #2d334a;
+}
+table {
+    margin: 5%;
+    width: 90%;
+}
+table, th, td {
+    border: 1px solid #272343;
+}
+table caption{
+    font-weight: bolder;
+    font-size: larger;
+}
+table caption,th{
+    color: #ffd803;
+}
+table thead tr td{
+    padding: 10px;
+    text-align: center;
+}
+th, td{
+    padding: 5px 5px;
+}
+hr{
+    color: #272343
+}
