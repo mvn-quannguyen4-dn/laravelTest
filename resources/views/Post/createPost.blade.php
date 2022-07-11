@@ -3,6 +3,7 @@
 Create Post
 @endsection
 @section('content')
+@can('create', App\Models\Post::class)
 <div class="create-post-form container">
     <form action="/posts" method="POST">
     @csrf
@@ -30,4 +31,7 @@ Create Post
     </div>
     </form>
 </div>
+@else
+    <h1>You doesn't have permission to create new post</h1>
+@endcan
 @endsection

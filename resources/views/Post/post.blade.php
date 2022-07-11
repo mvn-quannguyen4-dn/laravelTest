@@ -8,10 +8,11 @@ Post detail
         <form action="/posts/{{$post->id}}" method="post">
             @csrf
             @method("delete")
-            <button type="submit" class="delete-btn">Delete</button></a>
+            <button type="submit" class="delete-btn">Delete</button>
         </form>
     @endif
     <h1>{{$post->title}}</h1>
+    <a href="/posts/{{$post->id}}/edit"><button class="edit-btn">edit</button></a>
     <p>{{$post->content}}</p>
 </div>
 @endsection

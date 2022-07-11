@@ -3,6 +3,7 @@
 Create Post
 @endsection
 @section('content')
+@can('update', $post)
 <div class="container">
     <form action="/posts/{{$post->id}}" method="POST">
     @csrf
@@ -31,4 +32,7 @@ Create Post
     </div>
     </form>
 </div>
+@else
+    <h1>You doesn't have permission to edit this post</h1>
+@endcan
 @endsection
