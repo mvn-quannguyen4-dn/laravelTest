@@ -1,11 +1,11 @@
-@extends('layout.template')
+@extends('layouts.app')
 @section('title')
 List User
 @endsection
 @section('content')
 <div class="listUser">
     <table border="1" width="100%">
-       <caption>Danh sách user</caption>
+       <caption id="list-user-caption">Danh sách user</caption>
        <TR><TH>STT</TH><TH>User Name</TH><TH>User Mail</TH><TH>Action</TH></TR>
        @for ($i=0; $i < sizeof($userList); $i++)
            <TR>

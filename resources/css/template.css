@@ -11,7 +11,7 @@ table {
 table, th, td {
     border: 1px solid #272343;
 }
-table caption{
+table caption#list-user-caption{
     font-weight: bolder;
     font-size: larger;
 }
@@ -27,4 +27,8 @@ th, td{
 }
 hr{
     color: #272343
+}
+
+.create-post-form .form-group{
+    padding: 10% 0;
 }
