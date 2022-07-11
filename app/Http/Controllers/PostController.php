@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class PostController extends Controller
 {
@@ -15,6 +16,9 @@ class PostController extends Controller
      */
     public function index()
     {
+        if (! Gate::allows('list-post')) {
+            abort(403);
+        }
         $posts = Post::with('user')->get();
         return view('Post.listPost', compact('posts'));
     }
@@ -26,6 +30,9 @@ class PostController extends Controller
      */
     public function create()
     {
+        if (! Gate::allows('create-post')) {
+            abort(403);
+        }
         return view('Post.createPost');
     }
 
