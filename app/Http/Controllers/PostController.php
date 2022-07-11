@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
+    public function __construct(){
+        // $this->authorizeResource(Post::class,'posts');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,6 +18,9 @@ class PostController extends Controller
      */
     public function index()
     {
+        if (Auth::user()->cannot('viewAny', Post::class)) {
+            abort(403);
+        }
         $posts = Post::with('user')->get();
         return view('Post.listPost', compact('posts'));
     }
@@ -37,6 +43,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('create');
         $validatedData  = $request->validate([
             'title' => 'required|min:5|max:255',
             'content' => 'required|min:10',
@@ -57,6 +64,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
+        $this->authorize('view', $post);
         $message = 'denied';
         if($post->user_id == Auth::id()){
             $message = 'approved';
@@ -84,6 +92,7 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {        
+        $this->authorize('update', $post);
         $validatedData  = $request->validate([
             'title' => 'required|min:5|max:255',
             'content' => 'required|min:10',
